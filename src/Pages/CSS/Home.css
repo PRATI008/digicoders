@@ -1,0 +1,1457 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* removed global scroll-behavior: smooth to prevent slow scrolling jumps on page navigation */
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+  width: 100%;
+  min-height: 50px;
+  background-color: rgb(0, 0, 52);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 20px;
+  font-size: 14px;
+}
+
+
+/* Phone */
+
+.phone-no {
+  white-space: nowrap;
+}
+
+.phone-no a {
+  color: rgb(243, 118, 35);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.phone-no svg {
+  color: rgb(243, 118, 35);
+}
+
+
+/* PDF */
+
+.pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.pdf a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+.pdf a svg {
+  color: rgb(243, 118, 35);
+}
+
+.pdf a:hover {
+  color: rgb(243, 118, 35);
+}
+
+
+/* Top buttons */
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  min-height: 36px;
+  padding: 7px 10px;
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+
+ /* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  min-height: 85px;
+  background-color: rgb(245, 248, 248);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 25px;
+
+  position: relative;
+  z-index: 1000;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: block;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 75px;
+  width: auto;
+  display: block;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION LINKS
+========================================================= */
+
+/* Home, Verify, Registration, Gallery etc. */
+
+.nav-link > a,
+
+.nav-item > a,
+
+.nav-item > span {
+  color: rgb(5, 5, 65);
+
+  text-decoration: none;
+
+  padding: 10px 7px;
+
+  letter-spacing: 0.5px;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+
+  position: relative;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MAIN LINK HOVER
+========================================================= */
+
+.nav-link > a:hover,
+
+.nav-item > a:hover,
+
+.nav-item > span:hover {
+  color: rgb(243, 118, 35);
+}
+
+
+/* =========================================================
+   UNDERLINE EFFECT
+========================================================= */
+
+.nav-link > a::after,
+
+.nav-item > a::after,
+
+.nav-item > span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 2px;
+
+  width: 0;
+
+  height: 2px;
+
+  background-color: rgb(243, 118, 35);
+
+  transition: width 0.3s ease;
+}
+
+
+.nav-link > a:hover::after,
+
+.nav-item > a:hover::after,
+
+.nav-item > span:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   DROPDOWN PARENT
+========================================================= */
+
+.nav-item {
+  position: relative;
+
+  height: 85px;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   DROPDOWN BOX
+========================================================= */
+
+.nav-item > .nav {
+  position: absolute;
+
+  top: 82px;
+  left: 0;
+
+  width: 240px;
+
+  background-color: white;
+
+  border-top: 3px solid rgb(243, 118, 35);
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+
+  display: none;
+
+  z-index: 2000;
+}
+
+
+/* =========================================================
+   SHOW DROPDOWN ON HOVER
+========================================================= */
+
+.nav-item:hover > .nav {
+  display: block;
+}
+
+
+/* =========================================================
+   DROPDOWN LIST
+========================================================= */
+
+.submenu {
+  list-style: none;
+
+  width: 100%;
+
+  padding: 5px 0;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   DROPDOWN ITEMS
+========================================================= */
+
+.submenu li {
+  width: 100%;
+
+  padding: 0;
+
+  margin: 0;
+
+  list-style: none;
+}
+
+
+/* =========================================================
+   DROPDOWN LINKS
+========================================================= */
+
+.submenu li a {
+  display: block;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  color: #222;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: normal;
+
+  padding: 11px 15px;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   DROPDOWN LINK HOVER
+========================================================= */
+
+.submenu li a:hover {
+  color: rgb(243, 118, 35);
+
+  background-color: rgb(247, 245, 243);
+
+  padding-left: 22px;
+}
+
+
+/* =========================================================
+   SERVICES DROPDOWN
+========================================================= */
+
+.services > .nav {
+  right: 0;
+
+  left: auto;
+}
+
+
+/* =========================================================
+   DROPDOWN ACTIVE / FOCUS
+========================================================= */
+
+.submenu li a:focus {
+  outline: none;
+
+  color: rgb(243, 118, 35);
+
+  background-color: rgb(247, 245, 243);
+}
+
+
+/* =========================================================
+   MOBILE / SMALL SCREEN
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .nav-link {
+    gap: 0;
+  }
+
+  .nav-link > a,
+  .nav-item > a,
+  .nav-item > span {
+    font-size: 10px;
+    padding: 10px 5px;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+}
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.slider {
+  height: 600px;
+  width: 100%;
+  background-color: rgb(137, 162, 207);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Slide */
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Dark overlay */
+
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+
+/* Slide text */
+
+.slide-text {
+  position: absolute;
+  z-index: 5;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 25px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SLIDER BUTTONS
+========================================================= */
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  width: 48px;
+  height: 60px;
+
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  transition: 0.3s;
+}
+
+.prev {
+  left: 15px;
+  border-radius: 5px;
+}
+
+.next {
+  right: 15px;
+  border-radius: 5px;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+
+/* =========================================================
+   SLIDER DOTS
+========================================================= */
+
+.slider-dots {
+  position: absolute;
+  z-index: 30;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slider-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.slider-dots button.active-dot {
+  width: 25px;
+  border-radius: 10px;
+  background-color: rgb(243, 118, 35);
+}
+
+
+/* =========================================================
+   FADE ANIMATION
+========================================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   LATEST UPDATE
+========================================================= */
+
+.marquee {
+  position: absolute;
+  z-index: 40;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: rgb(0, 140, 255);
+}
+
+
+/* Update label */
+
+.update {
+  height: 100%;
+  min-width: 190px;
+
+  background-color: orangered;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-size: 14px;
+
+  border-top-right-radius: 50px;
+  flex-shrink: 0;
+}
+
+
+/* Marquee wrapper */
+
+.marquee-wrapper {
+  width: calc(100% - 190px);
+  overflow: hidden;
+}
+
+
+/* Moving content */
+
+.marquee-content {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+
+  color: white;
+  font-size: 14px;
+
+  animation: marqueeMove 35s linear infinite;
+}
+
+.marquee-content span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.marquee-content svg {
+  color: yellow;
+}
+
+
+/* Pause on hover */
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+
+@keyframes marqueeMove {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* =========================================================
+   SIDE FIXED BUTTONS
+========================================================= */
+
+.left-bar,
+.right-bar {
+  position: fixed;
+
+  z-index: 900;
+
+  top: 50%;
+
+  height: 38px;
+
+  border: none;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+
+/* Left */
+
+.left-bar {
+  left: -101px;
+  width: 240px;
+
+  background-color: rgb(112, 176, 235);
+
+  transform: rotate(-90deg);
+}
+
+
+/* Right */
+
+.right-bar {
+  right: -105px;
+  width: 250px;
+
+  background-color: orangered;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   FLOATING ICONS
+========================================================= */
+
+.icons {
+  position: fixed;
+
+  left: 15px;
+  bottom: 25px;
+
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* Common icon */
+
+.phone-icons,
+.whatshapp-icons {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 26px;
+
+  text-decoration: none;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  transition: 0.3s;
+}
+
+.phone-icons {
+  background-color: rgb(33, 96, 231);
+}
+
+.whatshapp-icons {
+  background-color: green;
+}
+
+.phone-icons:hover,
+.whatshapp-icons:hover {
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   HERO / ABOUT
+========================================================= */
+
+.hero {
+  width: 100%;
+  min-height: 500px;
+
+  padding: 60px 7%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 50px;
+
+  background-color: white;
+}
+
+
+/* Content */
+
+.hero-content {
+  width: 55%;
+}
+
+.hero-content h1 {
+  color: rgb(5, 5, 65);
+
+  font-size: 36px;
+
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  color: #444;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+.hero-content b {
+  color: rgb(243, 118, 35);
+}
+
+
+/* Image */
+
+.hero-img {
+  width: 45%;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   TEAM PAGE
+========================================================= */
+
+.founder {
+  width: 100%;
+
+  min-height: 500px;
+
+  display: flex;
+
+  gap: 50px;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 50px 7%;
+}
+
+
+.co-founder {
+  height: 300px;
+
+  width: 350px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.co-founder p {
+  font-weight: bold;
+
+  font-size: 25px;
+
+  text-align: center;
+}
+
+
+/* Heading */
+
+.heading {
+  width: 100%;
+
+  min-height: 300px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 50px 10%;
+}
+
+
+/* Expert team */
+
+.expert-team {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 50px 30px;
+
+  padding: 30px 5%;
+
+  justify-items: center;
+}
+
+
+.team-member {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+.team-member img {
+  width: 280px;
+
+  height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+
+.team-member p {
+  font-weight: bold;
+
+  font-size: 20px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .top-bar {
+    gap: 10px;
+    padding: 5px 10px;
+  }
+
+  .pdf {
+    gap: 8px;
+  }
+
+  .nav-link > a,
+  .nav-item > a {
+    font-size: 10px;
+    padding: 8px 5px;
+  }
+
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .expert-team {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  /* Top bar */
+
+  .top-bar {
+    flex-direction: column;
+
+    min-height: auto;
+
+    padding: 12px;
+
+    gap: 10px;
+  }
+
+  .pdf {
+    justify-content: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+
+  /* Navbar */
+
+  .navbar {
+    min-height: 75px;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+
+  .nav-link {
+    gap: 0;
+  }
+
+  .nav-link > a,
+  .nav-item > a {
+    font-size: 9px;
+    padding: 7px 4px;
+  }
+
+
+  /* Slider */
+
+  .slider {
+    height: 500px;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    min-height: auto;
+
+    flex-direction: column;
+
+    padding: 50px 6%;
+
+    gap: 30px;
+  }
+
+  .hero-content,
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+
+  /* Team */
+
+  .expert-team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =====================================================
+     TOP BAR
+  ====================================================== */
+
+  .top-bar {
+    padding: 12px 10px;
+  }
+
+  .phone-no {
+    font-size: 14px;
+  }
+
+  .pdf {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .buttons {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .buttons button {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+
+  /* =====================================================
+     NAVBAR
+  ====================================================== */
+
+  .navbar {
+    min-height: 70px;
+
+    padding: 5px 15px;
+
+    justify-content: center;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  /*
+    Mobile par current menu hide kar diya hai.
+    Baad me hamburger menu add kar sakte hain.
+  */
+
+  .nav-link {
+    display: none;
+  }
+
+
+  /* =====================================================
+     SLIDER
+  ====================================================== */
+
+  .slider {
+    height: 380px;
+  }
+
+  .slide img {
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  .slide-text {
+    bottom: 65px;
+
+    font-size: 16px;
+
+    padding: 8px 15px;
+  }
+
+
+  /* Slider arrows */
+
+  .prev,
+  .next {
+    width: 38px;
+    height: 45px;
+
+    font-size: 16px;
+  }
+
+  .prev {
+    left: 8px;
+  }
+
+  .next {
+    right: 8px;
+  }
+
+
+  /* Dots */
+
+  .slider-dots {
+    bottom: 55px;
+  }
+
+
+  /* =====================================================
+     LATEST UPDATE
+  ====================================================== */
+
+  .marquee {
+    height: 45px;
+  }
+
+  .update {
+    min-width: 115px;
+
+    font-size: 11px;
+
+    border-top-right-radius: 30px;
+  }
+
+  .marquee-wrapper {
+    width: calc(100% - 115px);
+  }
+
+  .marquee-content {
+    font-size: 11px;
+
+    gap: 40px;
+
+    animation-duration: 25s;
+  }
+
+
+  /* =====================================================
+     SIDE BUTTONS
+  ====================================================== */
+
+  .left-bar,
+  .right-bar {
+    display: none;
+  }
+
+
+  /* =====================================================
+     FLOATING ICONS
+  ====================================================== */
+
+  .icons {
+    left: auto;
+
+    right: 12px;
+
+    bottom: 15px;
+  }
+
+  .phone-icons,
+  .whatshapp-icons {
+    width: 48px;
+
+    height: 48px;
+
+    font-size: 21px;
+  }
+
+
+  /* =====================================================
+     HERO
+  ====================================================== */
+
+  .hero {
+    padding: 40px 20px;
+
+    gap: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .hero-img img {
+    width: 100%;
+  }
+
+
+  /* =====================================================
+     TEAM
+  ====================================================== */
+
+  .founder {
+    flex-direction: column;
+
+    min-height: auto;
+
+    padding: 40px 20px;
+
+    gap: 30px;
+  }
+
+  .co-founder {
+    width: 100%;
+
+    max-width: 350px;
+  }
+
+  .heading {
+    min-height: 250px;
+
+    padding: 40px 20px;
+  }
+
+  .expert-team {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 30px 20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .top-bar {
+    font-size: 12px;
+  }
+
+  .buttons {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+
+  /* Navbar */
+
+  .navbar {
+    min-height: 65px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
+
+  /* Slider */
+
+  .slider {
+    height: 300px;
+  }
+
+  .slide-text {
+    font-size: 14px;
+
+    bottom: 58px;
+  }
+
+  .prev,
+  .next {
+    width: 32px;
+
+    height: 38px;
+  }
+
+
+  /* Latest update */
+
+  .update {
+    min-width: 95px;
+
+    font-size: 9px;
+  }
+
+  .marquee-wrapper {
+    width: calc(100% - 95px);
+  }
+
+  .marquee-content {
+    font-size: 10px;
+
+    gap: 30px;
+
+    animation-duration: 20s;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Floating icons */
+
+  .icons {
+    right: 8px;
+
+    bottom: 10px;
+  }
+
+  .phone-icons,
+  .whatshapp-icons {
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 18px;
+  }
+
+
+  /* Team */
+
+  .team-member img {
+    width: 100%;
+
+    max-width: 280px;
+
+    height: 280px;
+  }
+
+  .team-member p {
+    font-size: 18px;
+  }
+
+}

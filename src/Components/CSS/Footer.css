@@ -1,0 +1,450 @@
+.footer {
+  width: 100%;
+  background: #1d2a3d;
+  color: #d5dbe4;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP SERVICES / CITY
+========================================================= */
+
+.footer-top {
+  background: #1d2a3d;
+  padding: 15px 17px 25px;
+}
+
+.footer-services h2,
+.city-section h2 {
+  color: #f5f5f5;
+  font-size: 21px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.orange-line {
+  width: 33px;
+  height: 2px;
+  background: #f36e24;
+  margin-bottom: 10px;
+}
+
+
+/* Services */
+
+.service-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1.8;
+}
+
+.service-links span {
+  font-size: 12px;
+  color: #d2d8e1;
+  padding: 0 10px;
+  border-right: 1px solid #465164;
+  white-space: nowrap;
+}
+
+.service-links span:first-child {
+  padding-left: 0;
+}
+
+
+/* =========================================================
+   CITY
+========================================================= */
+
+.city-section {
+  margin-top: 55px;
+}
+
+.state-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.state-row strong {
+  color: #18b9ff;
+  font-size: 13px;
+  min-width: max-content;
+}
+
+.city-list {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.7;
+}
+
+.city-list span {
+  font-size: 12px;
+  color: #d0d6df;
+  padding: 0 8px;
+  border-right: 1px solid #485365;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.main-footer {
+  background: #1d2a3d;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   COMPANY / BRANCHES
+========================================================= */
+
+.footer-company {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr;
+  gap: 35px;
+  padding: 30px 6%;
+  text-align: center;
+}
+
+
+/* Logo */
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 125px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.footer-logo h4 {
+  color: #8e9aaa;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+
+/* Social */
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-icons a {
+  width: 29px;
+  height: 29px;
+
+  border: 1px solid #667181;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #cdd4de;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #f36e24;
+  border-color: #f36e24;
+  color: white;
+}
+
+
+/* Branch */
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.branch h3 {
+  color: #f5f5f5;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.small-line {
+  width: 33px;
+  height: 2px;
+  background: #f36e24;
+  margin: 0 0 10px;
+}
+
+.branch p {
+  color: #d2d8e1;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 50px;
+
+  padding: 30px 3.2% 70px;
+}
+
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.footer-column h3 {
+  color: white;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+
+.footer-column .small-line {
+  margin-bottom: 8px;
+}
+
+
+.footer-column a {
+  color: #d1d7e0;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  line-height: 2.2;
+
+  transition: 0.3s;
+}
+
+
+.footer-column a:hover {
+  color: #f36e24;
+  padding-left: 3px;
+}
+
+
+.footer-column .blue-link {
+  color: #00a9f4;
+}
+
+
+/* =========================================================
+   SEO FOOTER
+========================================================= */
+
+.seo-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 35px;
+
+  padding: 10px 3.2% 20px;
+}
+
+
+.seo-column h2 {
+  color: #f5f5f5;
+
+  font-size: 18px;
+
+  line-height: 1.3;
+
+  margin-bottom: 12px;
+}
+
+
+.seo-column a {
+  display: block;
+
+  color: #d0d6df;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  margin-bottom: 8px;
+
+  transition: 0.3s;
+}
+
+
+.seo-column a:hover {
+  color: #f36e24;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .footer-company {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .seo-footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .footer-top {
+    padding: 20px 15px;
+  }
+
+  .footer-services h2,
+  .city-section h2 {
+    font-size: 19px;
+  }
+
+
+  /* Services */
+
+  .service-links span {
+    font-size: 11px;
+    padding: 0 7px;
+  }
+
+
+  /* Cities */
+
+  .city-section {
+    margin-top: 40px;
+  }
+
+  .state-row {
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 15px;
+  }
+
+  .state-row strong {
+    font-size: 13px;
+  }
+
+  .city-list span {
+    font-size: 11px;
+    padding: 0 6px;
+  }
+
+
+  /* Main footer */
+
+  .footer-company {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 35px 20px;
+  }
+
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px 20px;
+
+    padding: 30px 25px 50px;
+  }
+
+
+  .seo-footer {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px 20px;
+
+    padding: 25px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .footer-top {
+    padding: 20px 12px;
+  }
+
+  .service-links span {
+    font-size: 10px;
+  }
+
+  .city-list span {
+    font-size: 10px;
+  }
+
+
+  .footer-links {
+    grid-template-columns: 1fr;
+
+    padding: 30px 25px;
+  }
+
+
+  .seo-footer {
+    grid-template-columns: 1fr;
+
+    padding: 25px;
+  }
+
+
+  .seo-column h2 {
+    font-size: 17px;
+  }
+
+
+  .footer-column a,
+  .seo-column a {
+    font-size: 11px;
+  }
+
+}
